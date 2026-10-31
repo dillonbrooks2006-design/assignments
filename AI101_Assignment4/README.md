@@ -20,7 +20,7 @@ Both CSV files in this project are **synthetic datasets generated for this assig
 ## Task 1 written explanation (adapt after running)
 The prediction output is Gemini's estimate of the stock price for each company row. The actual and predicted columns can be compared to see how close the estimates are. The mean absolute error reports the average size of the prediction error in the same units as the stock price. Because Gemini is a language model responding to a prompt, its predictions may vary and should not be treated as verified financial forecasts.
 
-This approach differs from simply asking an AI assistant to write code: in this assignment, the CSV data itself is included in a prompt sent directly to the Gemini model, and Gemini is asked to analyze the data and produce predictions. The Python notebook then converts the text response into a DataFrame and plots the results. The handout does not describe the exact methods from Assignments 2 and 3, so add a specific comparison to those assignments based on the work you actually completed there.
+This approach differs from simply asking an AI assistant to write code: in this assignment, the CSV data itself is included in a prompt sent directly to the Gemini model, and Gemini is asked to analyze the data and produce predictions. The Python notebook then converts the text response into a DataFrame and plots the results. The supplied written answers compare the prompt-based workflow with the earlier use of AI to help write code. Adjust this comparison if your own work in Assignments 2 and 3 differed.
 
 ## Code explanations
 - **Install/import:** installs the Gemini package and imports tools for API access, tables, text cleanup, and plotting.
@@ -38,7 +38,7 @@ Task 2 repeats the same workflow with the used-car dataset. The identifier is `c
 
 ## Prompts documented
 1. **Analysis:** “Analyze the following dataset in CSV format. Explain the main trends, important metrics, relationships between columns, and any unusual observations. Use specific examples from the data. Do not claim that correlation proves causation. State that the dataset is synthetic.”
-2. **Prediction:** “Predict the target value for every row using the other available columns. Do not use the actual target as an input. Keep each row matched to its identifier. Return only valid CSV data with the identifier and predicted target columns.”
+2. **Prediction:** “Predict the target value for every row using the other available columns. Do not use the actual target as an input. Keep each row matched to its identifier. Return only valid CSV data with the row identifier and predicted target columns. In Task 1, include both `company_id` and `date` because each company appears more than once; in Task 2, `car_id` uniquely identifies a row.”
 
 ## GitHub submission checklist
 - [ ] Confirm whether the instructor requires the original finance CSV and the exact Assignment 2 dataset.
