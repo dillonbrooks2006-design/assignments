@@ -6,7 +6,7 @@
 - `data/finance_data.csv` — synthetic financial practice dataset.
 - `data/used_car_prices.csv` — synthetic used-car practice dataset.
 
-## Important dataset note
+## Model update\nThe assignment handout specifies `gemini-2.0-flash-lite`, which Google shut down on June 1, 2026. These notebooks use the supported `gemini-3.5-flash-lite` model and the current `google-genai` Python SDK so the workflow can run today.\n\n## Important dataset note
 Both CSV files in this project are **synthetic datasets generated for this assignment practice**. They are not real stock-market or used-car observations. If your instructor requires the original `finance_data.csv` or the dataset you used in Assignment 2, replace the matching CSV with that required file before submitting.
 
 ## How to run in Google Colab
@@ -14,7 +14,7 @@ Both CSV files in this project are **synthetic datasets generated for this assig
 2. Open each `.ipynb` file in Google Colab.
 3. Upload the matching CSV from the `data` folder when the notebook asks for it.
 4. Run the cells from top to bottom.
-5. Enter your own Gemini API key when prompted. Do not paste your API key into a public notebook or commit it to GitHub.
+5. Add your own `GEMINI_API_KEY` in Colab's Secrets panel, or enter it in the notebook's hidden prompt when asked. Do not paste your API key into a notebook cell or commit it to GitHub.
 6. Save the notebook after it runs. Keep the output cells, including the Gemini analysis and graph, for your submission.
 
 ## Task 1 written explanation (adapt after running)
@@ -24,7 +24,7 @@ This approach differs from simply asking an AI assistant to write code: in this 
 
 ## Code explanations
 - **Install/import:** installs the Gemini package and imports tools for API access, tables, text cleanup, and plotting.
-- **API setup:** reads the API key privately, configures Gemini, and selects the model named in the assignment handout.
+- **API setup:** reads the API key privately, configures Gemini, and selects `gemini-3.5-flash-lite` through the current Google GenAI SDK.
 - **Load CSV:** uploads and reads the dataset into a pandas DataFrame.
 - **Analysis prompt:** sends the CSV string to Gemini and prints its written analysis.
 - **Prediction prompt:** asks Gemini for one predicted target value per row in CSV format.
