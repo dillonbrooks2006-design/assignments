@@ -33,7 +33,7 @@ The Task 2 code cells perform the same operations described above: install/impor
 
 **Task 1 analysis prompt:** Analyze the following dataset in CSV format. Explain the main trends, important metrics, relationships between columns, and any unusual observations. Use specific examples from the data. Do not claim that correlation proves causation. State that the dataset is synthetic.
 
-**Task 1 prediction prompt:** Predict the value of the `stock_price` column for every row using the other available columns. Do not use the actual `stock_price` value as an input. Keep each row matched to its original `company_id`. Return exactly two columns named `company_id`, `date`, and `predicted_stock_price`, one prediction for every input row, and only valid CSV data.
+**Task 1 prediction prompt:** Predict the value of the `stock_price` column for every row using the other available columns. Do not use the actual `stock_price` value as an input. Keep each row matched to its original `company_id` and `date`. Return exactly three columns named `company_id`, `date`, and `predicted_stock_price`, one prediction for every input row, and only valid CSV data.
 
 **Task 2 analysis prompt:** The same analysis prompt is used with the used-car CSV, asking for dataset-specific trends, metrics, relationships, and unusual observations while identifying the data as synthetic and avoiding causal claims.
 
